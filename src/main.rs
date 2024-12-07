@@ -1,4 +1,9 @@
 use bevy::prelude::*;
+use setup::setup;
+use playground::spawn_playground;
+
+mod setup;
+mod playground;
 
 fn main() {
   App::new()
@@ -10,5 +15,6 @@ fn main() {
         }),
         ..default()
     }))
+    .add_systems(Startup, (setup, spawn_playground).chain())
   .run();
 }
