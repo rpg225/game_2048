@@ -29,7 +29,7 @@ pub fn spawn_playground(mut commands: Commands){
     commands
     .spawn(SpriteBundle{
         sprite: Sprite{
-            color:Color::rgb(228.0, 183.0/255.0),
+            color:Color::rgb(187.0/255.0, 173.0/255.0, 160.0/255.0),
             custom_size:Some(Vec2::new(playground.size, playground.size)),
             ..default()
         },
